@@ -1,12 +1,15 @@
-ul {
-    padding: 0;
+.contactsList {
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
-.listContact {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    margin-left: 25px;
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-

@@ -1,24 +1,38 @@
-.form {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    width: 300px;
+.boxWraper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  margin-bottom: 50px;
 }
 
-.label {
-    font-weight: normal;
-    margin-bottom: 5px;
+.form {
+  display: flex;
+  gap: 20px;
 }
 
 .input {
-    border: 1px solid rgb(129, 126, 126);
-    border-radius: 5px;
-    margin-bottom: 10px;
-    height: 35px;
-    padding-left: 15px;
+  width: 300px;
+  height: 40px;
+  padding: 10px;
+  border: 1px gray solid;
+  border-radius: 10px;
 }
 
-.input:focus {
-    border: 1px solid rgb(203, 177, 177);
-    outline: none;
+.searchBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  width: 120px;
+  border: none;
+  border-radius: 10px;
+  background-color: blue;
+  color: aliceblue;
+}
+
+.searchBtn:hover {
+  cursor: pointer;
+  background-color: rgb(12, 12, 137);
 }

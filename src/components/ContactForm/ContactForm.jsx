@@ -5,7 +5,8 @@ import { CiCirclePlus } from 'react-icons/ci';
 import { useDispatch } from 'react-redux';
 import * as Yup from 'yup';
 import { ErrorMessage } from 'formik';
-import { addContactThunk } from '../../redux/contactsOps';
+import { addContactThunk } from '../../redux/contacts/operations';
+import { Toaster, toast } from 'react-hot-toast';
 
 const ContactSchema = Yup.object().shape({
   name: Yup.string()
@@ -22,10 +23,13 @@ const ContactSchema = Yup.object().shape({
 const ContactForm = () => {
   const dispatch = useDispatch();
   const initialValues = { name: '', number: '' };
+  const addNotify = () => toast.success('Contact added to your contacts book');
   const onSubmit = (values, options) => {
     dispatch(addContactThunk({ name: values.name, number: values.number }));
+    addNotify();
     options.resetForm();
   };
+
   return (
     <div className={s.formWraper}>
       <Formik
@@ -62,6 +66,7 @@ const ContactForm = () => {
           </button>
         </Form>
       </Formik>
+      <Toaster position="top-center" reverseOrder={false} />
     </div>
   );
 };

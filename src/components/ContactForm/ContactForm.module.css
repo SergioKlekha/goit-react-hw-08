@@ -1,64 +1,58 @@
+.formWraper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .form {
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-}
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
 
-.blockForm {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 100%;
-}
-
-.icon {
-    position: absolute;
-    left: 5px;
-    top: 50%;
-    transform: translateY(-20%);
-    font-size: 20px;
-    /* color: blue; */
-}
-
-
-.label {
-    font-weight: normal;
-    margin-bottom: 5px;
+  border: 1px black solid;
+  border-radius: 20px;
 }
 
 .input {
-    border: 2px solid black;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    height: 40px;
-    padding-left: 30px;
-    transition: border-color 0.3s ease;
+  width: 400px;
+  height: 50px;
+  padding: 15px;
 
+  border-radius: 10px;
+  border: 1px grey solid;
 }
 
-.input:focus {
-    border: 1px solid rgb(203, 177, 177);
-    outline: none;
+.addBtn {
+  cursor: pointer;
+
+  width: 250px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  background-color: blue;
+  color: aliceblue;
+  font-size: 20px;
+  border: none;
+  border-radius: 20px;
 }
 
-.input:hover{
-    border-color: #4a90e2; 
+.addBtn svg {
+  width: 35px;
+  height: 35px;
 }
 
-
-.error {
-    position: absolute;
-    color: red;
-    font-size: 12px;
-    margin-top: 5px;
-    top: 85%;
-    transform: translateY(-50%);
+.addBtn:hover {
+  cursor: pointer;
+  background-color: rgb(12, 12, 137);
 }
 
-.button {
-    margin-top: 10px;
-    padding: 5px 10px;
-    cursor: pointer;
-    width: 175px;
-    margin: 0 auto;
+.ErrorMessage {
+  color: red;
+  margin-top: -20px;
 }

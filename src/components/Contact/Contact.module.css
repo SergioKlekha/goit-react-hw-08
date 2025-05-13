@@ -1,56 +1,60 @@
-p {
-    margin: 0;
+.contactWraper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+  padding: 20px;
+
+  width: 400px;
+  height: 150px;
+
+  border: 1px black solid;
+  border-radius: 15px;
 }
 
-.block {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border: 1px solid black;
-    border-radius: 5px;
-    width: 300px;
-    height: 65px;
-    padding: 5px;
+.infoWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.block:not(:last-child) {
-    margin-right: 15px;
-    margin-bottom: 15px;
+.nameBox,
+.numberBox {
+  font-size: 20px;
 }
 
-.list {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+.deleteBtn {
+  border: none;
+  background-color: transparent;
 }
 
-.iconText {
-    display: flex;
-    align-items: center;
-    gap: 8px; 
+.deleteBtn:hover {
+  cursor: pointer;
 }
 
-.icon {
-    font-size: 20px;
-    color: black;
-    fill: black;
+.deleteBtn svg {
+  width: 40px;
+  height: 40px;
+  color: red;
 }
 
-.button {
-    height: 30px;
-    border-radius: 4px;
-    cursor: pointer;
-    padding: 5px 10px;
+.editBtn {
+  border: none;
+  background-color: transparent;
 }
 
-.button:hover {
-    border-color: antiquewhite;
-    border-radius: 4px;
-    background-color: rgb(228, 223, 223);
-    box-shadow: 0 6px 6px 0 
-        rgba(0,0,0,0.24),0 17px 50px 0 
-        rgba(0,0,0,0.19);
+.editBtn:hover {
+  cursor: pointer;
+}
+
+.editBtn svg {
+  width: 40px;
+  height: 40px;
+  color: rgb(24, 82, 13);
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
 }
